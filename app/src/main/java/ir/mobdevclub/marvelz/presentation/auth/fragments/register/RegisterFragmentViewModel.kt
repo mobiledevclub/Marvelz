@@ -17,7 +17,7 @@ class RegisterFragmentViewModel @Inject constructor(
     private val registerUserUseCase: RegisterUserUseCase
 ) : ViewModel() {
 
-    private val _state = MutableStateFlow<RegisterUiState>(RegisterUiState.Initial)
+    private val _state = MutableStateFlow<RegisterUiState>(RegisterUiState.Initial) //todo can be replaced with LiveData for now!
     val state: StateFlow<RegisterUiState> = _state
 
     fun registerUser(userData: Int) {

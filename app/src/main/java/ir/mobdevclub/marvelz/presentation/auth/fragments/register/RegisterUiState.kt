@@ -6,6 +6,6 @@ import ir.mobdevclub.marvelz.data.remote.dto.register.TestResponse
 sealed class RegisterUiState {
     data class Success(val response: TestResponse) : RegisterUiState()
     object Loading : RegisterUiState()
-    object Initial : RegisterUiState()
+    object Initial : RegisterUiState()      //todo check if necessary!
     data class Error(val errorMessage: String) : RegisterUiState()
 }
