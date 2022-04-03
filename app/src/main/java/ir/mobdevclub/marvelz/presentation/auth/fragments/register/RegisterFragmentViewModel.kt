@@ -1,8 +1,11 @@
 package ir.mobdevclub.marvelz.presentation.auth.fragments.register
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import ir.mobdevclub.marvelz.common.Event
 import ir.mobdevclub.marvelz.common.Resource
 import ir.mobdevclub.marvelz.data.remote.dto.register.TestBody
 import ir.mobdevclub.marvelz.domain.use_case.auth_user.RegisterUserUseCase
@@ -20,9 +23,12 @@ class RegisterFragmentViewModel @Inject constructor(
     private val _state = MutableStateFlow<RegisterUiState>(RegisterUiState.Initial) //todo can be replaced with LiveData for now!
     val state: StateFlow<RegisterUiState> = _state
 
+    private val _livedata = MutableLiveData<Event<List<TestBody>>>()
+    val livedata: LiveData<Event<List<TestBody>>> = _livedata
+
+
     fun registerUser(userData: Int) {
         val body = TestBody(userData)
-
         registerUserUseCase(body).onEach { result ->
             when (result) {
                 is Resource.Success -> {
