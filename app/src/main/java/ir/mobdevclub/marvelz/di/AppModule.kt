@@ -8,9 +8,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import ir.mobdevclub.marvelz.common.Constants
 import ir.mobdevclub.marvelz.data.database.AppDatabase
-import ir.mobdevclub.marvelz.data.remote.AuthApiService
-import ir.mobdevclub.marvelz.data.repository.AuthRepositoryImpl
-import ir.mobdevclub.marvelz.domain.repository.AuthRepository
+import ir.mobdevclub.marvelz.data.remote.CharactersApiService
+import ir.mobdevclub.marvelz.data.repository.CharacterRepositoryImpl
+import ir.mobdevclub.marvelz.domain.repository.CharacterRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -40,8 +40,8 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideApiService(client: Retrofit): AuthApiService {
-        return client.create(AuthApiService::class.java)
+    fun provideApiService(client: Retrofit): CharactersApiService {
+        return client.create(CharactersApiService::class.java)
     }
 
 
@@ -61,8 +61,8 @@ class AppModule {
     //Repositories
     @Provides
     @Singleton
-    fun provideAuthRepository(api: AuthApiService): AuthRepository {
-        return AuthRepositoryImpl(api)
+    fun provideCharacterRepository(api: CharactersApiService): CharacterRepository {
+        return CharacterRepositoryImpl(api)
     }
 
 }

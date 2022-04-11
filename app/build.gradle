@@ -63,17 +63,17 @@ dependencies {
 //    implementation 'com.airbnb.android:lottie:5.0.3'
 //
 //    // FastAdapter
-//    def latestFastAdapterRelease = '5.4.1'
-//    implementation "com.mikepenz:fastadapter:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-expandable:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-binding:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-diff:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-drag:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-paged:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-scroll:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-swipe:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-ui:${latestFastAdapterRelease}"
-//    implementation "com.mikepenz:fastadapter-extensions-utils:${latestFastAdapterRelease}"
+    def latestFastAdapterRelease = '5.4.1'
+    implementation "com.mikepenz:fastadapter:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-expandable:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-binding:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-diff:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-drag:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-paged:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-scroll:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-swipe:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-ui:${latestFastAdapterRelease}"
+    implementation "com.mikepenz:fastadapter-extensions-utils:${latestFastAdapterRelease}"
 
     //Room
     implementation "androidx.room:room-runtime:2.4.2"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/movieListFragment"
-        android:name="ir.mobdevclub.marvelz.presentation.main.MovieListFragment"
+        android:name="ir.mobdevclub.marvelz.presentation.main.CharacterListFragment"
         android:label="MovieListFragment"
         tools:layout="@layout/fragment_movie_list"/>
 </navigation>
