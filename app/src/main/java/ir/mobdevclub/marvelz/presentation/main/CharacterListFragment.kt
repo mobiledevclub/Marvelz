@@ -60,7 +60,7 @@ class CharacterListFragment : Fragment() {
                 Toast.makeText(requireContext(), "loading", Toast.LENGTH_SHORT).show()
             }
             is Resource.Success -> {
-                charactersAdapter.set(resource.data!!.data.results.map { MarvelCharacterItem(it) })
+                charactersAdapter.set(resource.data!!.data.results.map { it.toCharacterListItem() })
             }
         }
     }
