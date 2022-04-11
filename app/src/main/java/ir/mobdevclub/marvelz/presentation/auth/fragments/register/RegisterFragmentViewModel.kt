@@ -26,9 +26,9 @@ class RegisterFragmentViewModel @Inject constructor(
     private val _livedata = MutableLiveData<Event<List<TestBody>>>()
     val livedata: LiveData<Event<List<TestBody>>> = _livedata
 
-
     fun registerUser(userData: Int) {
         val body = TestBody(userData)
+
         registerUserUseCase(body).onEach { result ->
             when (result) {
                 is Resource.Success -> {

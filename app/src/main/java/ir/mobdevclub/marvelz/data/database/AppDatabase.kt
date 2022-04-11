@@ -4,7 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 
 @Database(
-    entities = [],//todo
+    entities = [TestEntity::class],//todo
     version = 1
 )
 
