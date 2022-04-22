@@ -7,6 +7,7 @@ import ir.mobdevclub.marvelz.common.safeApiCall
 import ir.mobdevclub.marvelz.common.utils.md5
 import ir.mobdevclub.marvelz.data.remote.CharactersApiService
 import ir.mobdevclub.marvelz.data.remote.dto.characters.MarvelCharactersModel
+import ir.mobdevclub.marvelz.data.remote.dto.characterid.MarvelCharacterId
 import ir.mobdevclub.marvelz.domain.repository.CharacterRepository
 import java.util.*
 import javax.inject.Inject
@@ -22,6 +23,12 @@ class CharacterRepositoryImpl @Inject constructor(
     override suspend fun getAllCharacters(): Resource<MarvelCharactersModel> {
         return safeApiCall {
             api.getAllCharacters(ts = ts, hash = hash)
+        }
+    }
+
+    override suspend fun getCharacterById(id: String): Resource<MarvelCharacterId> {
+        return safeApiCall {
+            api.getCharacterById(id.toInt(), ts = ts, hash = hash)
         }
     }
 

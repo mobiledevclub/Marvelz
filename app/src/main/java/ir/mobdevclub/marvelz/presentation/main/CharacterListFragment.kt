@@ -40,6 +40,7 @@ class CharacterListFragment : Fragment() {
             observe(characters, ::onCharactersLoaded)
         }
 
+
     }
 
     private fun initAdapter() {
